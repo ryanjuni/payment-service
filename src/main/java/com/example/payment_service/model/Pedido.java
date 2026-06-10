@@ -5,11 +5,11 @@ import java.math.BigDecimal;
 public class Pedido {
     private Long pedidoID;
     private String nomeCliente;
-    private String emailCliente;       // Adicionado para o teste
-    private String descricaoProduto;   // Adicionado para o teste
+    private String emailCliente;
+    private String descricaoProduto;
     private String productName;
     private BigDecimal price;
-    private double valorTotal;         // Adicionado para o teste
+    private double valorTotal;
     private String statusPagamento;
 
     // Getters e Setters

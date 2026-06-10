@@ -15,7 +15,7 @@ class PaymentServiceApplicationTests {
 	void testarFluxoDePagamentoIntegradoReal() throws InterruptedException {
 		System.out.println("🚀 [INTEGRAÇÃO REAL] Iniciando simulação de eventos para o Kafka...");
 
-		// Apenas o cenário real que deve enviar o e-mail
+
 		String pedidoJson = """
         {
             "pedidoId": 2002,
@@ -30,7 +30,7 @@ class PaymentServiceApplicationTests {
 		System.out.println("⏳ Disparando pedido para o tópico 'lojavintage-pedidos'...");
 		kafkaTemplate.send("lojavintage-pedidos", pedidoJson);
 
-		// Aguarda 5 segundos para processar e finaliza
+
 		Thread.sleep(5000);
 		System.out.println("====== TESTE DE DISPARO CONCLUÍDO ======");
 	}
